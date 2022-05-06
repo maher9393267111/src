@@ -1,0 +1,41 @@
+.over-flow-container {
+  
+    width: 200px;
+    margin-left: 55px;
+    min-height: 300px;
+overflow: hidden;
+
+    grid-auto-columns: 100%;
+    padding: 0 3rem;
+    scroll-padding-inline: 3rem;
+    scroll-padding-block: 3rem;
+    background-color: aqua;
+    display: grid;
+    grid-auto-flow: column;
+
+    grid-auto-columns: 100%;
+
+}
+
+
+.group1{
+
+background-color: blueviolet;
+
+
+}
+
+.group2{
+
+    background-color:red
+    
+    
+    }
+
+
+    .group3{
+
+        background-color: green;
+        
+        
+        }
