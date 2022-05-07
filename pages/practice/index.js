@@ -11,11 +11,8 @@ const Practice = () => {
         <div>
             <h1>Practice</h1>
 
-            <motion.div animate={{ scale: 0.5 }} >
-<h1>motition hello</h1>
 
-
-            </motion.div>
+         
 
 
 

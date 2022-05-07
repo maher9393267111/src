@@ -21,14 +21,15 @@ code {
 }
 
 
-@layer base {
+/* @layer base {
   h1 {
     @apply text-4xl;
     @apply font-bold;
+    @apply bg-red;
   }
   h2 {
     @apply text-3xl;
     @apply font-bold;
   }
 
-}
+} */
