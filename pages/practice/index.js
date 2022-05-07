@@ -1,5 +1,5 @@
 import React from "react";
-
+import './index.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -27,7 +27,13 @@ import {   Box,
   Image,
   VStack,
   Center,
+  Icon,
+  
+  
  } from '@chakra-ui/react'
+
+ import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
+
 import { motion, useMotionValue, useTransform } from "framer-motion";
 const Practice = () => {
 
@@ -41,21 +47,18 @@ const Practice = () => {
     <div>
       <h1 className="   bg-slate-500">Practice</h1>
      
-      <Center bg='tomato' h='100px' color='white'>
-  This is the Center
-</Center>
-      <Button onClick={onOpen}>Open Drawer</Button>
-      <Drawer placement='right' onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader borderBottomWidth='1px'>Basic Drawer</DrawerHeader>
-          <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+  
+      <HStack>
+  <Center w='40px' h='40px' bg='tomato' color='white'>
+    <PhoneIcon color="red.500" h={8} w={9} textColor={'black'} />
+  </Center>
+  <Center w='40px' h='40px' bg='tomato' color='white'>
+    <Box as='span' fontWeight='bold' fontSize='lg'>
+      1
+    </Box>
+  </Center>
+</HStack>
+
 
 
 
