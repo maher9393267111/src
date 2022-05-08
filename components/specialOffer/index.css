@@ -105,3 +105,45 @@ top:12px
 
 
 }
+
+.icon-div-hover{
+border-top: 1px solid #ccc;
+padding: 11px;
+border-bottom: 1px solid #ccc;
+transform: translateY(35px);
+visibility: hidden;
+transition: all 0.3s;
+}
+
+
+/* --hover parent children show when hover  */
+.product-wrapper:hover > .icon-div-hover{
+
+visibility: visible;
+
+transform: translateY(1px);
+transition: transform 0.8s, visibility 0.5s;
+
+
+  }
+
+.product-desc{
+
+visibility:hidden ;
+transition: all 0.1s ease;
+height: 0px;
+
+}
+
+
+
+  .product-wrapper:hover > .product-desc {
+
+visibility: visible;
+transition:  visibility 0.7s ease;
+height: auto;
+
+
+  }
+
+  

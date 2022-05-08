@@ -19,20 +19,7 @@ import Newtab from "./newtab";
 import BestSellers from "./bestSellersTab";
 import Featured from "./featuredTab";
 const SpecialOffer = () => {
-  const [array, setArray] = useState([
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-  ]);
+ 
   const [page, setPage] = useState(0);
 
   const increase = (e) => {
