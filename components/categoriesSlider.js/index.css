@@ -1,0 +1,104 @@
+.wrapper{
+margin-top: 66px;
+margin-bottom: 70px;
+
+}
+
+
+.cat-title{
+
+   
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 24px;
+    width: 90%;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(0,0,0,.105);;
+    
+
+
+}
+.cat-title h1 {
+
+width: 199px;
+padding: 17px;
+margin-bottom: -20px;
+
+border-bottom: 2px solid orange;
+
+
+}
+
+.cat-title h1:hover {
+
+border-bottom:2px solid blue;
+
+}
+
+
+.mySwiper.swiper-button-prev{
+left: -20px;
+
+
+}
+
+
+
+.swiper-container{
+margin-left: 33px;
+
+}
+
+
+.item-container{
+
+width: 100%;
+
+height: 100%;
+
+
+}
+
+.image-container{
+height: 200px;
+
+
+}
+
+.item-image{
+width: 100%;
+height: 100%;
+object-fit: cover;
+gap: 10px;
+
+
+
+}
+
+.item-name{
+text-align: center;
+padding: 8px;
+font-size: 18px;
+font-weight: bold;
+
+
+
+}
+
+
+.item-productsnumber{
+
+text-align: center;
+font-weight: 400;
+
+
+}
+
+.item-image:hover{
+
+transform: scale(1.1);
+transition: all .8s;
+
+
+
+}

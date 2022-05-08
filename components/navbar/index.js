@@ -21,7 +21,10 @@ const Navbar = () => {
 
    useEffect(() => {
 
+
+
     if (isMobile) {
+
 
         console.log('mobile')
     }
@@ -36,10 +39,18 @@ const Navbar = () => {
 
 
 
+ if (window.innerWidth < 900) {
+
+console.log('mobile here issss')
+
+
+ }
+
+
 
 
   return (
-    <div className="nav-wrapper"  >
+    <div className="nav-wrapper    "  >
       <Container>
           
         

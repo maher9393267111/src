@@ -1,14 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
 //import Practice from './pages/practice/index.js';
 import Navbar from './components/navbar/index.js';
 import Home from './pages/home';
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
      
-     {/* <h1>Ecommerce App</h1> */}
+     
       <Navbar />
+
+      <Routes>
+        {/* <Route path="/login" element={<Login />} exact />
+        <Route path="/profile" element={<Profile />} exact /> */}
+        <Route path="/" element={<Home />} exact />
+       
+      </Routes>
+
 
 
 

@@ -1,34 +1,47 @@
 .nav-wrapper {
-background-color: rgba(9, 33, 67, 1);
-color:aqua;
-height: 69px;
+    background-color: rgba(9, 33, 67, 1);
+    color: aqua;
+    height: 69px;
 }
 
 
-.icon {
-position:absolute;
-top:30px;
-left:-49px;
-width:50px;
-font-size:24px;
+.icon-menu {
+    position: absolute;
+    top: 30px;
+    left: -49px;
+    width: 50px;
+    font-size: 24px;
 }
 
 
 .icon-div {
 
     position: relative;
-    }
+}
 
 
-    .cart-div{
+.cart-div {
 
-        position: relative;
-    }
+    position: relative;
+}
 
-    .cart-icon{
-        position: absolute;
-        right: -37px;
-        top: 25px;
-        font-size: 24px;
+.cart-icon {
+    position: absolute;
+    right: -37px;
+    top: 25px;
+    font-size: 24px;
 
-    }
+}
+
+
+/* // panul item */
+
+.menu-item{
+
+margin-bottom: 20px;
+
+}
+
+
+
+
