@@ -1,11 +1,19 @@
 import React from 'react';
-import {data} from './data'
+
 import {motion} from 'framer-motion'
 import {useState} from 'react'
-import { Carousel } from 'react-bootstrap';
-import {Flex,Box,Spacer,Grid,GridItem} from '@chakra-ui/react'
+import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
+// import { Carousel } from 'react-bootstrap';
+import {Flex,Box,Spacer,Grid,GridItem,Text} from '@chakra-ui/react'
 import {Row,Col,Button} from 'react-bootstrap'
 import './swiper.css'
+import {data} from './data'
+
+import Slider from "react-slick";
+
+
+
+
 
 
 
@@ -13,66 +21,83 @@ import './swiper.css'
 const Sub = () => {
 
 
+    const settings = {
+        dots: true,
+        
+        infinite: true,
+        speed: 400,
+        slidesToShow: 4,
+        slidesToScroll: 3
+      }
+
+
+    const [activeSlide, setActiveSlide] = useState(0);
+    console.log(data)
 return ( 
 
     <div >
-       
- 
 
-<Carousel className='carousel'  indicators={false}  nextIcon={<span className="next">next icon</span>}
-        prevIcon={<span className="prev">prev icon</span>}>
+{/* --HEADER--- */}
+
+<Box>
+
+<Text w='300px' paddingBottom='13px' fontSize={'xl'}  fontWeight='bold' 
+
+borderBottom={'3px solid orange'}
+transform={'translateX(120px)'}>
+
+ALL FOR THE GARDEN
 
 
-{/* -------------carousel parent end--------  */}
 
-{/* <Flex> */}
-
+</Text>
 
 
+</Box>
 
-  <Carousel.Item  className='caro-item' >
 
-<div className='to-image'>
+{/* -------slider container---- */}
+
+<div className='slider-container'>
     
 
 
-    <img
-      className="d-block w-100"
-      src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/10/retail-img-map-product-1-opt-330x340.jpg"
-      alt="First slide"
-    />
+
+<Slider {...settings}>
     
 
-{/* -image2- */}
 
-<img
-      className="d-block w-100"
-      src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/10/retail-img-map-product-1-opt-330x340.jpg"
-      alt="First slide"
-    />
+{data.map((item,index)=>{
+
+return (
+
+<div className='slider-item'>
+    
+<h1>{item.name}</h1>
+
+
 
 </div>
 
 
-  </Carousel.Item>
-  <Carousel.Item
-  className='caro-item'
-  >
-    <img
-      className="d-block w-100"
-      src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/10/retail-img-map-product-1-opt-330x340.jpg"
-      alt="Second slide"
-    />
-    <Carousel.Caption>
-      <h5>Second slide label</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
 
 
-{/* </Flex> */}
+)
 
-</Carousel>
+
+
+})}
+
+
+
+    </Slider>
+
+
+
+    
+    </div>
+
+
 
 </div>
 )

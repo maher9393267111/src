@@ -36,3 +36,60 @@ justify-content: center;
 
 
 }
+
+
+.slider-container{
+
+margin-top: 33px;
+position: relative;
+
+
+}
+
+.slick-arrow{
+    position: absolute;
+    right: 44%;
+    z-index: 5;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #171717;
+    font-weight: 600;
+    top: -55px;
+    text-transform: uppercase;
+
+    background-color: red;
+    border: none;
+
+    transition: all .3s;
+
+    cursor: pointer;
+}
+
+
+.skick-prev{
+
+
+
+
+}
+
+
+
+.slick-arrow:hover.slick-arrow.slick-prev::after,
+ .slick-arrow:hover.slick-arrow.slick-next::after{
+    filter: invert(100%);
+}
+
+
+.slick-arrow.slick-prev::after,
+.main_slider .slick-arrow.slick-next::after{
+    content: '';
+    width: 40px;
+    height: 10px;
+    position: absolute;
+    top: 17px;
+    left: 5px;
+    background-repeat: no-repeat;
+   
+    transition: all .3s;
+}

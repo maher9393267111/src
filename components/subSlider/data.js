@@ -3,12 +3,11 @@ export const data =[
 
 {
 id:1,
-name:'',
-image:''    ,
+name:'black-tshirt',
+image:'https://woodmart.xtemos.com/wp-content/uploads/2018/10/retail-product-12-opt-330x340.jpg'    ,
 
-price:'' ,
+price:'167' ,
 
-discound:'' ,
 
 
 }
@@ -17,10 +16,10 @@ discound:'' ,
 
 {
     id:2,
-    name:'one',
-    image:''    ,
+    name:'snowboard glass',
+    image:'https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/10/retail-product-11-opt-330x340.jpg'    ,
     
-    price:'' ,
+    price:'175' ,
     
     discound:'' ,
     
@@ -32,25 +31,38 @@ discound:'' ,
 { 
 
 id:3,
-name:'two',
-image:''    ,
+name:'gold laptop',
+image:'https://woodmart.xtemos.com/wp-content/uploads/2018/10/retail-product-2-opt-330x340.jpg'    ,
 
-price:'' ,
+price:'273' ,
 
-discound:'' ,
+
 
 
 },
 
 {id:4,
-    name:'three',
-    image:''    ,
+    name:'gardem shovel',
+    image:'https://woodmart.xtemos.com/wp-content/uploads/2018/10/retail-img-map-product-5-opt-330x340.jpg'    ,
     
-    price:'' ,
+    price:'169' ,
     
-    discound:'' ,
+   
     
     
+    },
+
+    {
+
+name:'lamp',
+image:'https://woodmart.xtemos.com/wp-content/uploads/2018/10/retail-img-map-product-1-opt-330x340.jpg'   ,
+
+price:'199' ,
+
+discount:'25',
+priceafterdiscount:'175' ,
+
+
     }
 
 
