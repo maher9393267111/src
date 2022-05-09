@@ -8,6 +8,7 @@ import TopCategories from "../../components/categoriesSlider.js";
 import { changename } from "../../redux/global";
 import SpecialOffer from "../../components/specialOffer";
 import { Grid, GridItem } from '@chakra-ui/react'
+import TwoSlider from "../../components/TwoProductSlider";
 const Home = () => {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(0);
@@ -17,8 +18,7 @@ const  {name} = useSelector(state => state.global)
 
   const dispatch = useDispatch();
 
- 
-   
+  
 
     
   return (
@@ -33,19 +33,28 @@ const  {name} = useSelector(state => state.global)
 
  {/* table and single  slider section */}
 
- <Grid templateColumns='repeat(12, 6fr)' h='740px'  bg=''  gap={6}>
+ <Grid marginBottom={'33px'} templateColumns={'repeat(12,1fr)'} h='740px'    >
 
  {/* ----- single slider  */}
 
-  <GridItem w='100%'  colSpan={4} h='10' bg='blue.500' >
+  <GridItem w='100%'   h='auto'
+  display={[{sm:'none'},{md:'block'}]}
+  colSpan={4}
+  
+  >
 
-single
+<TwoSlider />
+
+
+
 </GridItem>
 
 
-{/* // tables */}
+{/* // tables  colSpan={8} */}
 
-  <GridItem  colSpan={8}  >
+  <GridItem  colSpan={8}   h='auto' >
+
+  
 
   <SpecialOffer />
 
