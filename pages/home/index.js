@@ -7,8 +7,9 @@ import "./home.css";
 import TopCategories from "../../components/categoriesSlider.js";
 import { changename } from "../../redux/global";
 import SpecialOffer from "../../components/specialOffer";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem,Box } from "@chakra-ui/react";
 import TwoSlider from "../../components/TwoProductSlider";
+import MostPopular from "../../components/mostPopular";
 const Home = () => {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(0);
@@ -29,7 +30,8 @@ const Home = () => {
       <Grid
         marginBottom={"33px"}
         templateColumns={[{ sm: "repeat(1,1fr)" }, { md: "repeat(12,1fr)" }]}
-        h="740px"
+        // h="740px"   
+        h={{ sm: "auto", md: "740" }}   
         gap={3}
       >
         {/* ----- single slider  */}
@@ -57,6 +59,31 @@ const Home = () => {
       </Grid>
 
       {/* -------table end -------- */}
+
+
+  {/* ----- most popular component start here ------- */}
+<div className="most-popular-home">
+  
+
+<MostPopular />
+
+
+</div>
+
+
+
+  {/* ----------most popular component end here ------- */}
+
+
+<Box bg='darkgray'  w='300px' h='200px'>
+
+
+hello lay
+
+</Box>
+
+
+
     </div>
   );
 };

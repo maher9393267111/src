@@ -1,4 +1,5 @@
 import React from "react";
+import './index.css'
 import {
   Tabs,
   TabList,
@@ -17,15 +18,21 @@ import {
   HStack,
   Text,
   Badge ,
+  VStack,
+  StackDivider,
 } from "@chakra-ui/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { useState, useEffect,useRef } from "react";
 import { data } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
+import {BiSearchAlt2} from 'react-icons/bi'
+import {FiHeart } from 'react-icons/fi'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 const TwoSlider = () => {
   const [page, setPage] = useState(0);
   const [product, setProduct] = useState(data[0]);
+  const [isHover, setHover] = useState(false)
   const [number, setNumber] = useState(0);
 const animref = useRef('1');
 
@@ -88,9 +95,16 @@ useEffect(() => {
     setProduct(data[page]);
   };
 
+
+  const iconsbar = {
+    hidden: { scale: 0, top: 100 },
+    show: { scale: 2, top: 40 },
+}
+
+
   return (
     <Container
-    //   bg={["blue", { md: "red.100" }, { lg: "green.100" }]}
+       bg={["blue", { md: "red.100" }, { lg: "green.100" }]}
       w={{ sm: "600px", md: "100%" }}
       h={{ sm: "600px", md: "70%" }}
     >
@@ -122,6 +136,76 @@ useEffect(() => {
         {/* ----------products slider ------------ */}
 
         
+{/* ------ vartical hover icons in side image */}
+
+
+      
+   
+
+
+<Box position={'relative'} >
+
+ {/* --------here-------- */}
+{/* {isHover && */}
+
+<motion.div
+ 
+ animate={{
+  opacity: isHover ? 1 : 0,
+  translateX: isHover ? 0 :10,
+  transition: { duration: 0.5, ease: "easeInOut" },
+  
+  // rotate: isHover ? 90 : 0,
+}}
+ 
+
+
+>
+
+<Box   right={'1px'} position={'absolute'} top='15px'>
+
+
+<VStack
+  // divider={<StackDivider borderColor='gray.200' // line between vstack items/>}
+  // spacing={4}   --> for make border between icons
+  align='stretch'
+>
+  <Box textAlign={'center'} h='40px' w='40px' bg='yellow.200'>
+    <FiHeart className="side-icons" />
+  </Box>
+  <Box position={'relative'} textAlign={'center'} h='40px' bg='tomato'>
+  <BiSearchAlt2 className="side-icons"/>
+  </Box>
+  <Box  position={'relative'} textAlign={'center'} h='40px' bg='pink.100'>
+    <AiOutlineShoppingCart className="side-icons" />
+  </Box>
+</VStack>
+
+
+
+</Box>
+</motion.div>
+{/* } */}
+
+
+
+
+
+
+
+
+</Box>
+
+
+
+
+
+
+
+{/* ------ vartical hover icons in side image  END */}
+
+
+
 {/* ----animation---- */}
 
     <motion.div
@@ -129,6 +213,8 @@ useEffect(() => {
         whileInView={{ x:  page === 0 ? [-200, 0] : [-210,0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className="app__header-info"
+        onHoverStart={() => setHover(true)}
+                onHoverEnd={() => setHover(false)}
       >
 
 

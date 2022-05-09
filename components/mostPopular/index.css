@@ -1,0 +1,66 @@
+.header-div {
+
+    position: relative;
+    width: 100%;
+
+    height: 140px;
+
+}
+
+
+
+.slider-section-1 {}
+
+
+
+.image-container {
+
+    width: 80%;
+    height: 300px;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.image {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.arrows-container-1 {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-color: aqua;
+    z-index: 111;
+
+
+}
+
+
+
+
+.image-under-container {
+
+    text-align: center;
+
+    margin-bottom: 22px;
+
+
+
+
+}
+
+
+.icon1 {
+
+    margin-left: 10px;
+    font-size: 20px;
+
+}
