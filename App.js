@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Practice from './pages/practice/index.js';
-
+import SliderBranch from './pages/sliderBranch';
 import Home from './pages/home';
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
      <h1>React App</h1>
 
 {/* <Home /> */}
-<Practice />
+<SliderBranch />
+{/* <Practice /> */}
 
 
     </div>
