@@ -1,0 +1,38 @@
+.prev,.next{
+background-color: aquamarine;
+width: 100px;
+height: 100px;
+transform: translateY(-150px);
+
+
+}
+
+
+.carousel {
+
+
+width: 500px;
+margin: auto;
+display: flex;
+justify-content: center;
+
+
+}
+
+
+
+.caro-item{
+
+width: 150px;
+position: absolute;
+top: 30px;
+
+}
+
+.to-image{
+
+display: flex;
+justify-content: center;
+
+
+}

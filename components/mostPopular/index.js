@@ -88,7 +88,7 @@ const MostPopular = () => {
   };
 
   return (
-    <Box bg="darkcyan">
+    <Box >
       <Grid
         h="auto"
         marginBottom={"50px"}

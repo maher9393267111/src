@@ -10,6 +10,7 @@ import SpecialOffer from "../../components/specialOffer";
 import { Grid, GridItem,Box } from "@chakra-ui/react";
 import TwoSlider from "../../components/TwoProductSlider";
 import MostPopular from "../../components/mostPopular";
+import SubSlider from "../../components/subSlider";
 const Home = () => {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(0);
@@ -75,12 +76,18 @@ const Home = () => {
   {/* ----------most popular component end here ------- */}
 
 
-<Box bg='darkgray'  w='300px' h='200px'>
+{/* ----------subslider start here ---------- */}
 
 
-hello lay
+<Box className="subslider-wrapper"  w='100%' h='auto'>
+
+
+<SubSlider />
 
 </Box>
+
+
+{/* ----------subslider end here ---------- */}
 
 
 

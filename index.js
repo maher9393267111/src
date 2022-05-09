@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import theme from "./theme";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import "swiper/css/bundle";  // import css bundle for work swiper slider
