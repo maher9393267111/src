@@ -11,6 +11,9 @@ import { Grid, GridItem,Box } from "@chakra-ui/react";
 import TwoSlider from "../../components/TwoProductSlider";
 import MostPopular from "../../components/mostPopular";
 import SubSlider from "../../components/subSlider";
+import Markalar from "../../components/markalarSlider";
+import Blog from "../../components/blog";
+import Footer from "../../components/footer";
 const Home = () => {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(0);
@@ -88,6 +91,54 @@ const Home = () => {
 
 
 {/* ----------subslider end here ---------- */}
+
+
+{/* ----------markalar images slider  start here ---------- */}
+
+
+
+<div className="markalar-images">
+  
+
+<Markalar />
+
+
+</div>
+
+
+
+
+{/* ----------markalar images slider  end here ---------- */}
+
+
+
+{/* -------blog start here ------- */}
+
+
+<div className="blog-comp">
+  
+
+<Blog />
+
+
+</div>
+
+{/* ------blog end here ------- */}
+
+
+
+{/* ----------footer start here ---------- */}
+
+
+<div className="footer-home">
+
+<Footer />
+
+
+</div>
+
+
+
 
 
 

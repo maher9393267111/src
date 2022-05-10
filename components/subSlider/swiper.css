@@ -1,95 +1,95 @@
-.prev,.next{
-background-color: aquamarine;
-width: 100px;
-height: 100px;
-transform: translateY(-150px);
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* --- trick here with hide over flow from container-all that have all cards */
+
+.container {
+    width: 1265px;
+
+    overflow: hidden;
+    text-align: center;
+
+}
+
+
+/* product cards inside it  */
+
+.container-all {
+
+    margin: auto;
+    display: flex;
+    transition: all 1s ease 1s;
+
+    /* ------ 135px  well be hidden from products container-all  beacuse his parent container w=1265   --- */
+    width: 1400px;
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+
+    /* justify-content: space-between; */
 
 
 }
 
 
-.carousel {
+/* product cards  */
 
-
-width: 500px;
-margin: auto;
-display: flex;
-justify-content: center;
-
-
-}
+.container-all>div {
+    margin: 6px;
+    gap: 4px;
+    width: 400px;
+    height: 300px;
 
 
 
-.caro-item{
-
-width: 150px;
-position: absolute;
-top: 30px;
-
-}
-
-.to-image{
-
-display: flex;
-justify-content: center;
-
-
-}
-
-
-.slider-container{
-
-margin-top: 33px;
-position: relative;
-
-
-}
-
-.slick-arrow{
-    position: absolute;
-    right: 44%;
-    z-index: 5;
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: #171717;
-    font-weight: 600;
-    top: -55px;
-    text-transform: uppercase;
-
-    background-color: red;
-    border: none;
-
-    transition: all .3s;
-
-    cursor: pointer;
-}
-
-
-.skick-prev{
-
-
-
+    /* background-color: aqua; */
 
 }
 
 
 
-.slick-arrow:hover.slick-arrow.slick-prev::after,
- .slick-arrow:hover.slick-arrow.slick-next::after{
-    filter: invert(100%);
+/* when click from initial state translete -122px  {page true} */
+
+
+.transition1 {
+
+    transform: translate3d(-240px, 0px, 0px);
 }
 
 
-.slick-arrow.slick-prev::after,
-.main_slider .slick-arrow.slick-next::after{
-    content: '';
-    width: 40px;
-    height: 10px;
-    position: absolute;
-    top: 17px;
-    left: 5px;
-    background-repeat: no-repeat;
-   
-    transition: all .3s;
+
+/* ---- when click right icon again go to initial state-- */
+.transition2 {
+    transform: translate3d(0px, 0px, 0px);
+
 }
+
+
+
+.transition3 {
+    transform: translate3d(-900px, 0px, 0px);
+
+}
+
+
+
+.image-container{
+
+width: 100%;
+height: 188px;
+
+
+}
+
+
+.image-container > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+
+
+}
+

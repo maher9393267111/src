@@ -1,0 +1,51 @@
+.wrapper-markalar{
+
+width: 1250px;
+overflow: hidden;
+
+
+}
+
+
+.container-markalar{
+margin: auto;
+margin-left: 22px;
+width: 2400px;
+display: flex;
+justify-content: space-between;
+transform: translateX(0);
+
+
+
+}
+
+.transition1{
+
+transform: translateX(-1200px);
+
+}
+
+
+
+
+.container-markalar > .item{
+
+width: 120px;
+height: 80px;
+text-align: center;
+margin: 15px;
+
+
+}
+
+
+.item > img{
+
+    max-width: 100%;
+    opacity: .5;
+    /* filter: grayscale(100%); */
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    transition: filter .3s ease,opacity .3s ease;
+}

@@ -1,0 +1,23 @@
+ .list-container > ul{
+
+    list-style: none;
+    padding-top: 11px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.list-container > ul > li{
+
+margin-top:10px
+
+
+}
+
+.contact-input{
+
+    border:'2px solid orange'
+
+}
+
+
