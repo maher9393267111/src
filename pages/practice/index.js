@@ -1,51 +1,67 @@
+import React from 'react';
+import { products } from './data';
+import { useState } from 'react';
+import { addtocart,   deletefromcart } from './redux/global';
+import { useDispatch,useSelector } from 'react-redux';
 
-import React, { useState } from "react";
-import JsonData from "./data.json";
-import ReactPaginate from "react-paginate";
-import './index.css'
+// import {Box,Grid,Flex,Hstack,Button,Text,Heading,Image,Icon,Link} from '@chakra-ui/core';
+const Practice = () => {
 
-function Practice() {
-  const [users, setUsers] = useState(JsonData.slice(0, 50));  // slice(0, 50) is used to show only 50 users
-  const [pageNumber, setPageNumber] = useState(0);   // pageNumber is used to show the current page
-
-  const usersPerPage = 10;   // usersPerPage is used to show 10 users per page
-  const pagesVisited = pageNumber * usersPerPage;  // pagesVisited is used to show the current page  2 *10 = 20
-
-  const displayUsers = users
-    .slice(pagesVisited, pagesVisited + usersPerPage)  // slice from  pagenumber well be +++  1 2 when pageNumber change change pages visited and change slice from
-    .map((user) => {
-      return (
-        <div className="user">
-          <h3>{user.firstName}</h3>
-          <h3>{user.lastName}</h3>
-          <h3>{user.email}</h3>
-        </div>
-      );
-    });
-
-  const pageCount = Math.ceil(users.length / usersPerPage);
-
-  const changePage = ({ selected }) => {
-    setPageNumber(selected);
-  };
-
-console.log('pageNumber', pageNumber, 'pagesVisited', pagesVisited, 'usersPerPage', usersPerPage, 'pageCount', pageCount);
+const dispatch = useDispatch();
+const cart = useSelector(state => state.global.cart);  // cart is an array in global state
+const [cartItems, setCartItems] = useState(cart);
 
 
   return (
-    <div className="App">
-      {displayUsers}
-      <ReactPaginate
-        previousLabel={"Previous"}
-        nextLabel={"Next"}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={"paginationBttns"}
-        previousLinkClassName={"previousBttn"}
-        nextLinkClassName={"nextBttn"}
-        disabledClassName={"paginationDisabled"}
-        activeClassName={"paginationActive"}
-      />
+    <div>
+<div>
+  <h1 className="bg-slate-500">Practice</h1>
+  <h1>{cartItems.length}</h1>
+</div>
+
+{products.map(product => (
+  
+
+
+  <div style={{display:'flex'}}>
+    <h1>{product.name}</h1>
+
+<h1>
+  <button
+  
+  onClick={() => {
+    dispatch(addtocart(product));
+    setCartItems(cart);
+  }
+  }
+  >Add to cart</button>
+</h1>
+
+
+
+{/* -delete from cart-- */}
+
+
+<h1>
+  <button
+  
+  onClick={() => {
+    dispatch(deletefromcart(product));
+    setCartItems(cart);
+  }
+  }
+  >delete from  cart</button>
+</h1>
+
+
+
+  </div>
+
+
+))}
+
+
+
     </div>
   );
 }
