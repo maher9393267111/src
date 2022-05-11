@@ -1,17 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Practice from './pages/practice/index.js';
-
-import Home from './pages/home';
-function App() {
+import React from 'react';
+import Practice from './pages/practice';
+const App = () => {
   return (
-    <div className="App">
-     
-     <h1>React App</h1>
+    <div>
+      <h1 className="bg-slate-500">React App</h1>
 
-{/* <Home /> */}
+
 <Practice />
-
 
     </div>
   );
